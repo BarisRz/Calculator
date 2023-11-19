@@ -1,5 +1,6 @@
-Template pour rapidement coder, React+Vite  🚀
-### Presetup
+Challenge [FrontEndMentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29) d'une Calculette
+### setup
+
 ```
 npm install
 npm run dev
