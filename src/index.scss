@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: hsl(222, 26%, 31%);
+}
+
+.dark {
+  background-color: hsl(0, 0%, 90%);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: League Spartan;
+  body {
+    height: 100svh;
+  }
+}
+
+.switch {
+  width: 70px;
+  height: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 50px;
+  padding: 0 4px;
+
+  cursor: pointer;
+  &[data-ison="true"] {
+    justify-content: flex-end;
+  }
+
+  .handle {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+  }
+}
+
+.container {
+  height: 720px;
+  width: 540px;
+
+  height: 630px;
+
+  .resultat {
+    height: 130px;
+  }
+  .input {
+    height: 480px;
+    display: grid;
+    grid-auto-rows: 60px;
+    grid-auto-columns: 100px;
+    grid-template-areas:
+      "a a a del"
+      "a a a plus"
+      "a a a minus"
+      "p z s mult"
+      "r r egal egal";
+
+    .number-input {
+      grid-area: a;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+    .point {
+      grid-area: p;
+    }
+    .zero {
+      grid-area: z;
+    }
+    .slash {
+      grid-area: s;
+    }
+    .del {
+      grid-area: del;
+    }
+    .plus {
+      grid-area: plus;
+    }
+    .minus {
+      grid-area: minus;
+    }
+    .mult {
+      grid-area: mult;
+    }
+    .reset {
+      grid-area: r;
+    }
+    .egal {
+      grid-area: egal;
+    }
+  }
+}
+
+.button-input:active {
+  transform: scale(0.9);
+}
